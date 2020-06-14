@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>data数据对象</title>
+	</head>
+	<body>
+		<div id="app">
+			<p> hello world {{username}}</p>
+			<p>{{school}} {{school.name}}  {{school.mobile}}</p>
+			<ul>
+				<li>{{campus[0]}}</li>
+				<li>{{campus[2]}}</li>
+				
+			</ul>
+		</div>
+		
+		<script type="text/javascript" src="js/vue-2.5.17.js" ></script>
+		<script type="text/javascript">
+			//				创建VUE实例
+			var app=new Vue({    //配置对象
+				el:"#app",  //element选择器
+				data:{      //数据：model
+					username:"hi",
+					school:{
+						name:"本科学院",
+						mobile:"13327387537"
+					},
+					campus:["北京","长沙","深圳"]
+				}
+			})
+		</script>
+	</body>
+</html>
